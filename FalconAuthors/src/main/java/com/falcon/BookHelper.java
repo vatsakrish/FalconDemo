@@ -48,6 +48,7 @@ public class BookHelper {
 				LOGGER.debug(getClass().getName()+" - Books list has been handled successfuly");
 				
 				for(Book book : books) {
+					if(book.getAuthor().equalsIgnoreCase(authname))
 					sum=sum.add(book.getPrice());
 				}
 				LOGGER.debug(getClass().getName()+" - total profit is - "+sum);
